@@ -1,3 +1,3 @@
-#Agenda de Contactos
+# Agenda de Contactos
 
-Esta es una libreta de contactos personal
+Libreta de contactos personal
