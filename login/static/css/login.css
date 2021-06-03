@@ -1,0 +1,128 @@
+/* https://abalozz.es/sobre-como-usar-px-em-rem-y-percent-en-responsive-design/ (1rem = 16px) */
+
+body {
+    background-color: rgb(233, 227, 227);
+}
+
+.hero {
+    /* https://developer.mozilla.org/es/docs/Web/CSS/font-size */
+    font-size: 2rem;
+    /* https://francescricart.com/como-centrar-un-texto-con-css/ */
+    text-align: center;
+    color: #172b9ca1;
+    margin-left: 3%;
+}
+
+/* https://openwebinars.net/blog/centrar-div-horizontalmente-con-css/ (centrar horizontalmente) */
+.UI_Main_Container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 0.3rem solid white;
+    box-shadow: 2px 2px 2px 2px rgb(202, 195, 195);
+    border-radius: 3% 3% 0% 0%;
+    background-color: white;
+    margin: 0 30% 0 31%; /* property: top right bottom left; (con las manecillas del reloj) */
+    padding: 2% 0% 0% 2.75%;
+}
+
+.formError {
+    margin-bottom: 3%;
+}
+
+.formError span {
+    color: red;
+    margin-left: 0.88rem;
+}
+
+.form {
+    margin: 0 auto;
+    padding-bottom: 3.5%;
+}
+
+.form form {
+    align-content: space-between;
+}
+
+#inputUser {
+    padding-right:11.2%;
+    padding-left: 3%;
+}
+
+#inputEmail {
+    padding-right:14%;
+    padding-left: 3%;
+}
+
+#inputPassword {
+    padding-right: 6%;
+    padding-left: 3%;
+}
+
+#inputConfirmPassword {
+    padding-right: 6%;
+    padding-left: 3%;
+}
+
+.form input {
+    /* Alinear a la izquierda el placeholder */
+    margin-top: 1%;
+    padding: 0.8rem 8.9rem 0.8rem 0rem;
+}
+
+.form button {
+    color: white;
+    background-color: #172b9ca1;
+    border: 0.01rem solid #172b9ca1;
+    border-radius: 0.2rem;
+    align-self: center;
+}
+
+#buttonRegister {
+    padding: 0.9rem 8.3rem 0.9rem 8rem;
+    margin: 4% 0% 4% 26.5%;
+}
+
+#backToLogin {
+    text-decoration: none;
+    margin: 4% 0% 3% 30.5%;
+}
+
+#buttonLogin {
+    padding: 0.9rem 7.5rem 0.9rem 8rem;
+    margin-left: 26.5%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+.forgotPassword {
+    text-align: center;
+    margin-left: 22%;
+    padding-bottom: 2%;
+}
+
+#resetPassword {
+    text-decoration: none;
+    color: #172b9ca1;
+    font-weight: bold;
+}
+
+.createAccount {
+    background-color: rgb(233, 227, 227);
+    border: 0.3rem solid rgb(233, 227, 227);
+    box-shadow: 2px 2px 2px 2px rgb(202, 195, 195);
+    border-radius: 0% 0% 3% 3%;
+    margin: 0% 30% 0% 31%;
+}
+
+.createAccount p {
+    text-align: center;
+    margin-bottom: 4%;
+    margin-left: 26%;
+}
+
+.createAccount form button {
+    padding: 0.9rem 7.8rem 0.9rem 8.5rem;
+    margin-bottom: 3%;
+    margin-left: 32%;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/static/css/login.css" rel="stylesheet" type="text/css">
+        <title>{{action}}</title>
+    </head>
+    <body>
+        <div class="hero">
+            <h1>Phone Book</h1>
+        </div>
+        <div class="UI_Main_Container">
+        {% if error %}
+            <div class="formError">
+                <span><b id="error">{{error}}</b></span>
+            </div>
+        {% endif %}
+            <div class="form">
+                <form action="/{{action}}" method="POST">
+                    <label id="inputUser"><b>Usuario</b></label>
+                    <input type="text" placeholder="Usuario" name="username" required>
+                    {% block container %}
+                    {% endblock %}

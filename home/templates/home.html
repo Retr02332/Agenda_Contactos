@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/home.css" rel="stylesheet" type="text/css">
+    <script src="/static/script/CreateCustomElement.js"></script>
+    <script src="/static/script/home.js"></script>
+    <title>{{ request.user.username }} | Profile</title> <!--¿DANGER?-->
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="{% static  'phoneBook.png' %}" alt="Icono PhoneBook" />
+        </figure>
+        <h2>Phone Book</h2>
+        <nav>
+            <ul>
+                <figure>
+                    <img src="{% static 'anonymous.png' %}" alt="Image Profile" />
+                </figure>
+                <li><a href="">{{request.user.username}}</a></li> <!--¿DANGER?-->
+                <li id="userOptions" onclick="alert(1)">&#9660;</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="root">
+        <div class="buttonsCreateAndDelete">
+            <input type="checkbox" id="checkboxDeleteAll">
+            <label id="selectAll">Seleccionar Todo</label>
+            <script>
+                let checkboxDeleteAll = document.getElementById("checkboxDeleteAll");
+                checkboxDeleteAll.onclick = function(event) {
+                    /* Fijar en true todos los checked de los section en ContactsUser */
+                    (event.target.checked)? clickedAllChecked(true) : clickedAllChecked(false);
+                }
+            </script>
+            <div class="buttons">
+                <button id="DeleteButton" onclick="deleteItems()">Borrar</button>
+                <button id="CreateButton" onclick="changeDisplayForm(true)">Crear</button>
+            </div>
+        </div>
+        <div id="error">
+            <span></span>
+        </div>
+        <div class="FormNewUser" id="CreateUser">
+            
+            <div class="headerForm">
+                <p><b>Crea un nuevo contacto</b></p>
+                <label id="closeForm" onclick="changeDisplayForm(false)">&#10006;</label>
+            </div>
+
+            <div class="newContactUsername">
+                <label>Nombre</label>
+                <input type="text" id="username">
+            </div>
+
+            <div class="newContactEmail">
+                <label>Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="newContactPhone">
+                <label>Celular</label>
+                <input type="tel" id="contactPhone">
+            </div>
+
+            <button type="submit" onclick="createNewContact()">Enviar</button>
+        </div>
+        <div class="contacts" id="ContactsUser"></div>
+    </div>
+</body>
+</html>
+<!--SSTI-->

@@ -1,0 +1,21 @@
+{% extends "login/base.html" %}
+
+{% block container %}
+                    <label id="inputPassword"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                    <button id="buttonLogin">Inicia sesión</button>
+                </form>
+                <div class="forgotPassword">
+                    <a id="resetPassword" href="/password/reset">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+        <div class="createAccount">
+            <p><b>¿Aún no tienes una cuenta en Phone Book?</b></p>
+            <form action="/signup" method="GET">
+                <button id="buttonRedirectRegister">Regístrate</button>
+            </form>
+        </div>
+    </body>
+</html>
+{% endblock %}

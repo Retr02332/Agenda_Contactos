@@ -1,0 +1,17 @@
+{% extends "login/base.html" %}
+
+{% block container %}
+                    <label id="inputEmail"><b>Email</b></label>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <label id="inputPassword"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                    <label id="inputConfirmPassword"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Confirmar Contraseña" name="confirm_password" required>
+                    <button id="buttonRegister">Registrate</button>
+                    <a id="backToLogin" href="/login">¿Ya tienes una cuenta?, Inicia sesión ahora</a>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+{% endblock %}
